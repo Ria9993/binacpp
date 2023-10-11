@@ -1857,6 +1857,7 @@ BinaCPP::curl_api_with_header( string &url, string &str_result, vector <string> 
 			BinaCPP_logger::write_log( "<BinaCPP::curl_api> curl_easy_perform() failed: %s" , curl_easy_strerror(res) ) ;
 		} 	
 
+		curl_easy_reset(BinaCPP::curl);
 	}
 
 	BinaCPP_logger::write_log( "<BinaCPP::curl_api> done" ) ;
